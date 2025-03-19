@@ -33,3 +33,31 @@ python3 nmap_scan.py example.com
 2. Identify running services
 3. Detect potential security vulnerabilities
 4. Generate detailed analysis reports
+
+## ike-scan
+
+ike-scan is a specialized tool for discovering and fingerprinting IKE (Internet Key Exchange) hosts and identifying VPN servers. We have developed a Python wrapper script that automates scanning and reporting.
+
+### ike_scan.py Script
+
+This script performs automated IPSec VPN scanning and generates Markdown-formatted security reports.
+
+**Usage**:
+```bash
+python3 ike_scan.py example.com
+```
+
+**Optional arguments**:
+- `--output` or `-o`: Specify report save location (defaults to reports directory)
+- `--aggressive` or `-a`: Use aggressive scanning mode
+- `--timeout` or `-t`: Specify timeout in seconds (default: 5)
+- `--verbose` or `-v`: Enable verbose output
+
+**Features**:
+1. Scan target domain or IP for IPSec VPN services
+2. Identify supported transforms and encryption methods
+3. Detect potential security issues such as weak ciphers or authentication methods
+4. Analyze backoff patterns for fingerprinting
+5. Generate detailed security analysis reports
+
+**Note**: Available options may vary depending on your version of ike-scan. If you encounter errors, try running `ike-scan --help` to see the options supported by your installed version.
